@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+dist/
+.gemini/
+.env
+setup_github_remote.sh

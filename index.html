@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megan Carelse | Official Website</title>
+    <meta name="description" content="Official website of Johannesburg artist & actor Megan Carelse. Stream her soulful music releases, browse her Prime Video style acting portfolio, and shop official merchandise.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.400.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Megan Carelse</a>
+            <div class="nav-links">
+                <a href="index.html" class="active"><span>Home</span></a>
+                <a href="about.html"><span>About</span></a>
+                <a href="discography.html"><span>Discography</span></a>
+                <a href="merchandise.html"><span>Shop</span></a>
+                <a href="contact.html"><span>Contact</span></a>
+                <button id="cartToggleBtn" class="cart-toggle-btn" aria-label="Open Shopping Cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="hero">
+        <!-- CSS-Animated Ambient Glow Orbs -->
+        <div class="hero-glow-container">
+            <div class="hero-glow-orb one"></div>
+            <div class="hero-glow-orb two"></div>
+            <div class="hero-glow-orb three"></div>
+        </div>
+
+        <!-- Dynamic Particle Container (populated via JS) -->
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <!-- Drifting Parallax Lyrics -->
+        <div class="hero-lyrics-bg">
+            <div class="floating-lyric one">Oh, I'm coming home, let the road fade away</div>
+            <div class="floating-lyric two">You are the hearth where the fire burns bright</div>
+            <div class="floating-lyric three">Keeping me safe in the quiet of night</div>
+        </div>
+
+        <div class="container hero-content-container">
+            <div class="hero-content-wrapper">
+                <!-- Left: Typography & Player -->
+                <div class="hero-text-block">
+                    <span class="merch-collection-tag" style="margin-bottom: 16px; display: inline-block; letter-spacing: 3px; font-weight: 600;">The New EP Out Now</span>
+                    <h1>Home</h1>
+                    <p class="hero-subtitle">Megan Carelse</p>
+                    <p class="hero-desc" style="font-style: italic; font-size: 1.25rem; font-family: 'Cormorant Garamond', Georgia, serif; line-height: 1.6; max-width: 550px; margin: 0 auto 24px; color: var(--primary-light);">"No longer a stranger, no longer astray. Oh, I’m coming home, let the road fade away."</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#latest-release" class="hero-btn primary">Listen to EP</a>
+                        <a href="merchandise.html?collection=Home" class="hero-btn secondary">Shop "Home" Merch</a>
+                    </div>
+                </div>
+
+                <!-- Right: Parallax Vinyl Sleeve Mockup -->
+                <div class="hero-visual-block">
+                    <div class="hero-vinyl-wrapper" id="heroVinylWrapper">
+                        <div class="hero-vinyl-sleeve">
+                            <img src="assets/photos/cover-home.jpg" alt="Home EP Cover Sleeve">
+                            <div class="hero-sleeve-overlay">
+                                <span>Home EP</span>
+                            </div>
+                        </div>
+                        <div class="hero-vinyl-record"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Brief About Section (Now at top of Homepage) -->
+        <section id="about" class="about-section" style="padding-top: 100px;">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/photos/megan-carelse-1.jpg" alt="Megan Carelse Portrait">
+                    </div>
+                    <div class="about-text">
+                        <h2>About Megan</h2>
+                        <div class="divider left"></div>
+                        <p>Megan Carelse is a multi-talented artist and actor based in Johannesburg, South Africa. Blending deep soulful vocals with atmospheric songwriting, her music is an immersive journey into emotion and cinematic warmth.</p>
+                        <p>A true storyteller, Megan is also recognized for her compelling screen acting credentials in drama and suspense thriller productions. Her work balances artistic vulnerability with raw, magnetic presence.</p>
+                        <div style="margin-top: 32px;">
+                            <a href="about.html" class="hero-btn primary" style="padding: 12px 28px; font-size: 0.85rem;">Read Full Biography <i data-lucide="arrow-right" style="width: 14px; height: 14px; vertical-align: middle; margin-left: 6px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated Latest Release Spotlight Section -->
+        <section id="latest-release" class="featured-section" style="background-color: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); padding: 100px 0; overflow: hidden;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="merch-collection-tag">Featured Studio Release</span>
+                    <h2>Featured EP: "Home"</h2>
+                    <p class="subtitle">Experience the five warm, soulful indie-folk tracks that form Megan's defining artistic statement.</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="latest-release-container">
+                    <!-- Premium Interactive Vinyl Cover -->
+                    <div class="vinyl-spotlight-wrapper" id="homeVinylWrapper">
+                        <div class="vinyl-sleeve">
+                            <img src="assets/photos/cover-home.jpg" alt="Home EP Cover Sleeve" id="homeSleeveImg">
+                            <div class="sleeve-overlay">
+                                <span class="sleeve-title" id="homeSleeveTitle">Home EP</span>
+                                <span class="sleeve-artist">Megan Carelse</span>
+                            </div>
+                        </div>
+                        <div class="vinyl-record">
+                            <div class="vinyl-label">
+                                <div class="label-inner">
+                                    <span id="homeLabelTitle">Home</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spotlight Text, Description, and Player Controls -->
+                    <div class="latest-release-details">
+                        <h3 class="release-title" id="homeTrackTitle">Home</h3>
+                        <p class="release-artist" id="homeTrackMeta">Track 1 • Folk Ballad</p>
+                        
+                        <p class="release-description" id="homeTrackStory">
+                            "Home is a comforting folk/acoustic track about the relief of returning to familiar spaces. It explores how home isn't just a place on a map, but a feeling of absolute belonging and safety."
+                        </p>
+
+                        <!-- EP Tracklist Selector -->
+                        <div class="ep-tracklist-container" style="margin-bottom: 24px;">
+                            <h4 style="font-family: 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin-bottom: 12px; font-weight: 600;">EP Tracklist</h4>
+                            <div class="ep-tracklist" id="epTracklist">
+                                <!-- Track 1 -->
+                                <div class="ep-track-item active" data-track-id="home" data-audio-src="assets/music/SND-spotidownloadercom-home-megan-carelse.mp3" data-title="Home" data-meta="Track 1 • Folk Ballad" data-story="&quot;Home is a comforting folk/acoustic track about the relief of returning to familiar spaces. It explores how home isn't just a place on a map, but a feeling of absolute belonging and safety.&quot;">
+                                    <div class="ep-track-num">01</div>
+                                    <div class="ep-track-details">
+                                        <span class="ep-track-name">Home</span>
+                                        <span class="ep-track-duration">3:28</span>
+                                    </div>
+                                    <div class="ep-track-play-indicator">
+                                        <i data-lucide="play" class="play-small"></i>
+                                        <span class="playing-bars hidden"><span></span><span></span><span></span></span>
+                                    </div>
+                                </div>
+                                <!-- Track 2 -->
+                                <div class="ep-track-item" data-track-id="my-gravity" data-audio-src="assets/music/My Gravity - Megan Carelse.mp3" data-title="My Gravity" data-meta="Track 2 • Acoustic Ambient Indie" data-story="&quot;My Gravity is a breathtaking journey into warm ambient textures, layered vocal warmth, and poignant lyrics. Blending organic acoustic instrumentation with modern atmospheric space, the single explores the concept of quiet emotional anchors.&quot;">
+                                    <div class="ep-track-num">02</div>
+                                    <div class="ep-track-details">
+                                        <span class="ep-track-name">My Gravity</span>
+                                        <span class="ep-track-duration">2:56</span>
+                                    </div>
+                                    <div class="ep-track-play-indicator">
+                                        <i data-lucide="play" class="play-small"></i>
+                                        <span class="playing-bars hidden"><span></span><span></span><span></span></span>
+                                    </div>
+                                </div>
+                                <!-- Track 3 -->
+                                <div class="ep-track-item" data-track-id="peonies" data-audio-src="assets/music/SND-spotidownloadercom-peonies-megan-carelse.mp3" data-title="Peonies" data-meta="Track 3 • Acoustic Ballad" data-story="&quot;Peonies is a warm acoustic ballad representing organic growth after a cold Johannesburg winter. It celebrates the quiet beauty of blooming in your own time, surrounded by patience and light.&quot;">
+                                    <div class="ep-track-num">03</div>
+                                    <div class="ep-track-details">
+                                        <span class="ep-track-name">Peonies</span>
+                                        <span class="ep-track-duration">3:17</span>
+                                    </div>
+                                    <div class="ep-track-play-indicator">
+                                        <i data-lucide="play" class="play-small"></i>
+                                        <span class="playing-bars hidden"><span></span><span></span><span></span></span>
+                                    </div>
+                                </div>
+                                <!-- Track 4 -->
+                                <div class="ep-track-item" data-track-id="make-you-happy" data-audio-src="assets/music/SND-spotidownloadercom-make-you-happy-megan-carelse.mp3" data-title="Make You Happy" data-meta="Track 4 • Acoustic Lullaby" data-story="&quot;A gentle, finger-picked acoustic lullaby. Written during a quiet rainy evening, it speaks to the simple, humble desire of wanting to bring peace and joy to someone you deeply care about.&quot;">
+                                    <div class="ep-track-num">04</div>
+                                    <div class="ep-track-details">
+                                        <span class="ep-track-name">Make You Happy</span>
+                                        <span class="ep-track-duration">3:39</span>
+                                    </div>
+                                    <div class="ep-track-play-indicator">
+                                        <i data-lucide="play" class="play-small"></i>
+                                        <span class="playing-bars hidden"><span></span><span></span><span></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Mini-Audio Player -->
+                        <div class="homepage-player-card">
+                            <audio id="homeAudio" src="assets/music/SND-spotidownloadercom-home-megan-carelse.mp3"></audio>
+                            
+                            <div class="hp-player-controls-row">
+                                <button class="hp-play-pause-btn" id="homePlayPauseBtn" aria-label="Play Track">
+                                    <i data-lucide="play" id="homePlayIcon"></i>
+                                    <i data-lucide="pause" id="homePauseIcon" class="hidden"></i>
+                                </button>
+                                
+                                <div class="hp-progress-column">
+                                    <div class="hp-track-info-line">
+                                        <span class="hp-track-title" id="homePlayerSubtitle">Streaming: Home (Preview)</span>
+                                        <span class="hp-time-display"><span id="homeCurrentTime">0:00</span> / <span id="homeDurationTime">0:00</span></span>
+                                    </div>
+                                    <div class="hp-progress-container" id="homeProgressContainer">
+                                        <div class="hp-progress-bar" id="homeProgressBar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Purchase and More Actions Row -->
+                        <div class="hp-actions-row">
+                            <button class="hero-btn primary" id="homeBuyTrackBtn" style="padding: 14px 28px; font-size: 0.9rem; flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                                <i data-lucide="shopping-cart" style="width: 16px; height: 16px;"></i> Buy Digital EP — R75.00
+                            </button>
+                            <a href="discography.html" class="hero-btn secondary" style="padding: 14px 28px; font-size: 0.9rem; color: var(--foreground); border-color: var(--gray-400); text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+                                View Entire Discography <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+                            </a>
+                        </div>
+
+                        <!-- Streaming Platform Badges -->
+                        <div class="hp-streaming-platforms" style="margin-top: 24px;">
+                            <span class="stream-title">Also Stream On:</span>
+                            <div class="stream-badges">
+                                <a href="https://api.ffm.to/sl/e/ps/r6nxgvx?cd=eyJ1YSI6eyJ1YSI6Ikdvb2dsZS1KZXRza2ktQW50aWdyYXZpdHkiLCJicm93c2VyIjp7fSwiY3B1Ijp7fSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7fSwib3MiOnt9fSwiY2xpZW50Ijp7InJpZCI6IjljNmM2NDc3LTg5MTMtNDA4MC1hMGUzLTUwNzZhNTE3OGZhNSIsInNpZCI6ImE3OTE5ZWRjLTBjODYtNDY3NC05YWM0LTU4OWMwYTgwNmY2NyIsImlwIjoiNzQuMTI1LjE1MS4xNjUiLCJyZWYiOiIiLCJob3N0IjoidG9vLmZtIiwibGFuZyI6bnVsbCwiaXBDb3VudHJ5IjoiVVMifSwiaXNXZWJwU3VwcG9ydGVkIjpmYWxzZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IlVTIiwiaXNCb3QiOnRydWUsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6ImQzYWNhMjc3LTUwM2YtNDcyMC1hMDhlLTU0MTQxNGU4ZTFjYiIsImlkIjoiNmE1MDBkNjgyOTAwMDAxNzAwOTdlYzIyIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuc3BvdGlmeS5jb20vYXV0aG9yaXplP2NsaWVudF9pZD02NmQzY2RiNDQ4MDc0YTBkODhlOWIwOGJhYWYyZjNkNyZyZXNwb25zZV90eXBlPWNvZGUmcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZzcG90aWZ5JTJGYXV0aG9yaXplJnNjb3BlPXVzZXItcmVhZC1wcml2YXRlJTIwdXNlci1yZWFkLWJpcnRoZGF0ZSUyMHVzZXItcmVhZC1lbWFpbCUyMHVzZXItbGlicmFyeS1tb2RpZnklMjB1c2VyLWxpYnJhcnktcmVhZCUyMHVzZXItcmVhZC1yZWNlbnRseS1wbGF5ZWQlMjB1c2VyLWZvbGxvdy1yZWFkJTIwdXNlci1mb2xsb3ctbW9kaWZ5JTIwdXNlci10b3AtcmVhZCUyMHBsYXlsaXN0LW1vZGlmeS1wdWJsaWMlMjBwbGF5bGlzdC1yZWFkLXByaXZhdGUlMjBwbGF5bGlzdC1tb2RpZnktcHJpdmF0ZSZzdGF0ZT1leUprWWt4cGJtdEpaQ0k2SWpaaE5UQXdaRFk0TWprd01EQXdNVGN3TURrM1pXTXlNaUlzSW1GamRHbHZibFI1Y0dVaU9tNTFiR3dzSW1OMFlTSTZJbEJ5WlMxVFlYWmxJaXdpZFhObGNrTnZkVzUwY25raU9pSlZVeUlzSW5Ob2IzSjBTV1FpT2lKeU5tNTRaM1o0SWl3aVpHOXRZV2x1SWpvaWFIUjBjSE02THk5MGIyOHVabTBpTENKelpYSjJhV05sVG1GdFpTSTZJbk53YjNScFpua2lMQ0p3Y205a2RXTjBJam9pYzIxaGNuUnNhVzVySWl3aWNtVmkaWEpsWTNSVmNta2lPaUpvZEhSd2N6b3ZMM1J2Ynk1bWJTOXlObTU0WjNaNEwzQnlaWE5oZG1WallXeHNZbUZqYXlJc0ltWmhiR3hpWVdOclZYSnNJanB1ZFd4sZExDSnBjMUJ5WlZKbGJHVmhjMlVpT25SeWRXVXNJbWx6Sm5WMGRYSmxVbVZzWldGelpTSTZabUZzYzJVc0ltRnlkR2x6ZEVsa0lqb2lOakU0TVRKa1lXWXlOVEF3TURCbE5qYzNZV1psTjJZeUlpd2lZWEowYVhOMFQzZHVaWElpT2lJMVpXVTJZbU5sWWpNeU1EQXdNRFkwTWpKa1pETmhOamdpTENKaFkzUnBiMjVKWkNJNmJuVnNiQ3dpWjJSd2NrVnVabTl5WTJVaU9tWmhiSE5sTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pTnpRdU1USTFMakUxTVM0eE5qVWlMQ0p5WlhkaGNtUlZjMlZ5U1dRaU9tNTFiR3dzSW5KbFptVnljbUZzU1dRaU9tNTFiR3dzSW5WMWFXUWlPaUprTTJGallUSTNOeTAxTURObUxUUTNNakF0WVRBNFpTMDFOREUwTVRSbE9HVXhZMklpZlEmMTEwMGxqVTNQIiwic3J2YyI6InNwb3RpZnkiLCJwcm9kdWN0Ijoic21hcnRsaW5rIiwic2hvcnRJZCI6InI2bnhndngiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1ZWU2YmNlYjMyMDAwMDY0MjJkZDNhNjgiLCJhciI6IjYxODEyZGFmMjUwMDAwZTY3N2FmZTdmMiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0=" class="stream-badge" target="_blank" rel="noopener">
+                                    <svg role="img" viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.02.24-2.82-1.74-6.36-2.12-10.56-1.14-.42.096-.839-.18-.936-.6-.096-.419.18-.839.6-.936 4.62-1.056 8.52-.6 11.7 1.38.36.24.48.66.24 1.056zm1.44-3.3c-.3.42-.839.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.96-.18-1.08-.66-.12-.48.18-.96.66-1.08 4.38-1.32 9.78-.72 13.5 1.56.42.24.6.78.3 1.26zm.12-3.36C14.88 7.5 8.28 7.26 4.44 8.4c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.38-1.32 11.7-1.08 16.5 1.2.54.3 1.02.96.72 1.5-.3.54-.96 1.02-1.5.72z"/></svg>Spotify
+                                </a>
+                                <a href="https://api.ffm.to/sl/e/ps/r6nxgvx?cd=eyJ1YSI6eyJ1YSI6Ikdvb2dsZS1KZXRza2ktQW50aWdyYXZpdHkiLCJicm93c2VyIjp7fSwiY3B1Ijp7fSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7fSwib3MiOnt9fSwiY2xpZW50Ijp7InJpZCI6IjljNmM2NDc3LTg5MTMtNDA4MC1hMGUzLTUwNzZhNTE3OGZhNSIsInNpZCI6ImE3OTE5ZWRjLTBjODYtNDY3NC05YWM0LTU4OWMwYTgwNmY2NyIsImlwIjoiNzQuMTI1LjE1MS4xNjUiLCJyZWYiOiIiLCJob3N0IjoidG9vLmZtIiwibGFuZyI6bnVsbCwiaXBDb3VudHJ5IjoiVVMifSwiaXNXZWJwU3VwcG9ydGVkIjpmYWxzZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IlVTIiwiaXNCb3QiOnRydWUsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6ImQzYWNhMjc3LTUwM2YtNDcyMC1hMDhlLTU0MTQxNGU4ZTFjYiIsImlkIjoiNmE1MDBkNjgyOTAwMDAxNzAwOTdlYzIyIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2FwcGxlL2F1dGhvcml6ZT9zdGF0ZT1leUprWWt4cGJtdEpaQ0k2SWpaaE5UQXdaRFk0TWprd01EQXdNVGN3TURrM1pXTXlNaUlzSW1GamRHbHZibFI1Y0dVaU9tNTFiR3dzSW1OMFlTSTZJbEJ5WlMxQlpHUWlMQ0oxYzJWeVEyOTFiblJ5ZVNJNklsVlRJaXdpYzJodmNuUkpaQ0k2SWpJMmJuaG5kbmdpTENKa2IyMWhhVzRpT2lKb2RIUndjem92TDNSdmJ5NW1iU0lzSW5ObGNuWnBZMlZPWVcxbElqb2lYWEJ3YkdVaUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwzUnZieTVtYlM5eU5tYTRaM1o0TDNCeVpYTmhkbVZqWVd4sWW1GamF5SXNJbVpoYkd4aVlXTnJWWEpzSWpwdWRXeHNMQ0pwYzFCeVpWSmxiR1ZoYzJVaU9uUnlkV1VzSW1selJuVjBkWEpsVW1Wc1pXRnpaU0k2Wm1Gc2MyVXNJbUZ5ZEdsemRFbGtJam9pTmpFNE1USmtZV1l5TlRBd01EQmxOamMzWVdabE4yWXlJaXdpWVhKMGFYTjBUM2R1WlhJaU9pSTFaV1UyWW1ObFlqTXlNREF3TURYME1qSmtaRE5oTmpnaUxDSmhZM1JwYjI1SlpDSTZiblVzYkN3aVoyUndja1Z1Wm05eVkyVWlPbVpoYkhObExDSnNhVzVyVkhsd1pTSTZiblVzYkN3aWRYVnBaQ0k2SW1RellXTmhNamMzTFRVd00yWXRORGN5TUMxaE1EaGxMVFUwTVRReE5HVTRaVEZqWWlKOSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRmFwcGxlJTJGYXV0aG9yaXplIiwic3J2YyI6ImFwcGxlIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJyNm54Z3Z4IiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOnRydWUsIm93bmVyIjoiNWVlNmJjZWIzMjAwMDA2NDIyZGQzYTY4IiwiYXIiOiI2MTgxMmRhZjI1MDAwMGU2NzdhZmU3ZjIiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9" class="stream-badge" target="_blank" rel="noopener">
+                                    <svg role="img" viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.07 2.47.3 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.2.67-2.92 1.49-.62.69-1.16 1.83-1.01 2.96 1.12.09 2.26-.59 2.94-1.39z"/></svg>Apple Music
+                                </a>
+                                <a href="https://api.ffm.to/sl/e/ps/r6nxgvx?cd=eyJ1YSI6eyJ1YSI6Ikdvb2dsZS1KZXRza2ktQW50aWdyYXZpdHkiLCJicm93c2VyIjp7fSwiY3B1Ijp7fSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7fSwib3MiOnt9fSwiY2xpZW50Ijp7InJpZCI6IjljNmM2NDc3LTg5MTMtNDA4MC1hMGUzLTUwNzZhNTE3OGZhNSIsInNpZCI6ImE3OTE5ZWRjLTBjODYtNDY3NC05YWM0LTU4OWMwYTgwNmY2NyIsImlwIjoiNzQuMTI1LjE1MS4xNjUiLCJyZWYiOiIiLCJob3N0IjoidG9vLmZtIiwibGFuZyI6bnVsbCwiaXBDb3VudHJ5IjoiVVMifSwiaXNXZWJwU3VwcG9ydGVkIjpmYWxzZSwiZ2RwckVuZm9yY2UiOmZhbHNlLCJjb3VudHJ5Q29kZSI6IlVTIiwiaXNCb3QiOnRydWUsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6ImQzYWNhMjc3LTUwM2YtNDcyMC1hMDhlLTU0MTQxNGU4ZTFjYiIsImlkIjoiNmE1MDBkNjgyOTAwMDAxNzAwOTdlYzIyIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm10SlpDSTZJalpoTlRBd1pEWTRNamt3TURBd01UY3dNRGszWldNeU1pSXNJbUZqZEdsdmJsUjVjR1VpT2m1MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKVlV5SXNJbk5vYjNKMFNXUWlPaUp5Tm01NFozWjRJaXdpWkc5dFlXbHVJam9pYUhSMGNITTZMeTkwYjI4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnBaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2ZEc5dkxtWnRMM0kyYm5obmRuZ3ZjSEpsYzJGMlpXTmhiR3hpWVdOcllpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanBtWVd4elpTd2lZWEowYVhOMFNXUWlPaUkyTVRneE1tUmhaakkxTURBd01HVTJOemRoWm1VM1pqSWlMQ0poY25ScGMzUlBkMjVsY2lJNklqVmxaVFppWTJWaU16SXdNREF3TmpReU1tUmtNMkUyT0NJc0ltRmpkR2x2Ymtsa0lqcHVkV3hzTENKblpIQnlSVzVtYjNKalpTSTZabUZzYzJVc0lteHBibXRVZVhCbElqcHVkV3hzTENJMWMyVnlTVkFpT2lJM05DNHhNalV1TVRVeExqRTJOU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblVzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblVzYkN3aWRYVnBaQ0k2SW1RellXTmhNamMzTFRVd00yWXRORGN5TUMxaE1EaGxMVFUwTVRReE5HVTRaVEZqWWlKOSZyZXNwb25zZV90eXBlPWNvZGUmY29uc2VudD1QbGVhc2UlMjBhbGxvdyZwcm9tcHQ9Y29uc2VudCZzY29wZT1odHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ5b3V0dWJlJTIwaHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGdXNlcmluZm8ucHJvZmlsZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLmVtYWlsJTIwaHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGbXVzaWMmY2xpZW50X2lkPTc2NzgyNzkyMzAyNy1oZ2tqYWZqYmppMTJ1cnV2bGk1dDlxbG1kYXRrcHYyMi5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnlvdXR1YmUlMkZhdXRob3JpemUiLCJzcnZjIjoieW91dHViZW11c2ljIiwicHJvZHVjdCI6InNtYXJ0bGluayIsInNob3J0SWQiOiJyNm54Z3Z4IiwiaXNBdXRob3JpemF0aW9uUmVxdWlyZWQiOnRydWUsIm93bmVyIjoiNWVlNmJjZWIzMjAwMDA2NDIyZGQzYTY4IiwiYXIiOiI2MTgxMmRhZjI1MDAwMGU2NzdhZmU3ZjIiLCJpc1Nob3J0TGluayI6ZmFsc2UsIm5hdGl2ZSI6ZmFsc2V9" class="stream-badge" target="_blank" rel="noopener">
+                                    <svg role="img" viewBox="0 0 24 24" fill="currentColor" style="width: 14px; height: 14px; margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.52 3.545 12 3.545 12 3.545s-7.52 0-9.388.51a3.003 3.003 0 0 0-2.11 2.108C0 8.03 0 12 0 12s0 3.97.51 5.837a3.003 3.003 0 0 0 2.11 2.108c1.868.51 9.388.51 9.388.51s7.52 0 9.388-.51a3.003 3.003 0 0 0 2.11-2.108c.51-1.867.51-5.837.51-5.837s0-3.97-.51-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brief Acting Section (Showing Credibility) -->
+        <section id="acting" class="acting-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Theatrical & Stage Credits</h2>
+                    <p class="subtitle">Brief portfolio of her professional stage, drama, and musical theatre career.</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="prime-video-container">
+                    <!-- Spotlight Portrait Card -->
+                    <div class="spotlight-card">
+                        <img src="assets/photos/megan-carelse-4.jpg" alt="Megan Carelse Dramatic Portrait" class="spotlight-img">
+                        <div class="spotlight-badge">Stage Spotlight</div>
+                        <div class="spotlight-overlay">
+                            <h3>Megan Carelse</h3>
+                            <span class="spotlight-subtitle">Stage Credibility</span>
+                            <p class="spotlight-description">Showcasing commanding dramatic presence and vocal prowess across several legendary stage, musical, and theatrical productions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Prime Video Slider of Project covers/movie posters -->
+                    <div class="acting-slider-column">
+                        <h3 class="slider-header-title">Browse Productions</h3>
+                        <div class="acting-slider-wrapper">
+                            <button class="slider-nav-btn prev" id="slidePrevBtn" aria-label="Scroll Left"><i data-lucide="chevron-left"></i></button>
+                            <div class="acting-slider" id="actingGrid">
+                                <!-- Acting cards injected by JS -->
+                            </div>
+                            <button class="slider-nav-btn next" id="slideNextBtn" aria-label="Scroll Right"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA Section -->
+        <section id="cta" class="cta-section">
+            <div class="cta-overlay">
+                <div class="container">
+                    <h2>Experience the Journey</h2>
+                    <p>Subscribe to get the latest updates on releases, performances, and behind-the-scenes exclusives.</p>
+                    <form class="cta-form" id="subscribeForm">
+                        <input type="email" placeholder="Your email address" required aria-label="Email Address">
+                        <button type="submit">Join the Community</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homepage Merchandise Section: COLLECTIONS SHOWCASE -->
+        <section id="merch-showcase" class="merch-section" style="background-color: var(--background); border-bottom: 1px solid var(--gray-100);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="merch-collection-tag">Official Store</span>
+                    <h2>Official Merchandise Collections</h2>
+                    <p class="subtitle">Premium garments designed with premium apparel Megan Carelse</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="collections-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+                    <!-- Home Collection Cover -->
+                    <div class="collection-card home-col" onclick="window.location.href='merchandise.html?collection=Home'" style="position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 3/4; cursor: pointer;">
+                        <div class="collection-card-bg" style="background-image: url('assets/photos/cover-home.jpg'); width:100%; height:100%; background-size:cover; transition: var(--transition);"></div>
+                        <div class="collection-card-overlay" style="justify-content: center; background: rgba(8, 12, 13, 0.65);">
+                            <h3 style="margin: 0; font-size: 2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; text-transform: none; letter-spacing: 0.5px;">"Home"</h3>
+                        </div>
+                    </div>
+
+                    <!-- My Gravity Collection Cover -->
+                    <div class="collection-card my-gravity-col" onclick="window.location.href='merchandise.html?collection=My Gravity'" style="position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 3/4; cursor: pointer;">
+                        <div class="collection-card-bg" style="background-image: url('assets/photos/cover-my-gravity.jpg'); width:100%; height:100%; background-size:cover; transition: var(--transition);"></div>
+                        <div class="collection-card-overlay" style="justify-content: center; background: rgba(8, 12, 13, 0.65);">
+                            <h3 style="margin: 0; font-size: 2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; text-transform: none; letter-spacing: 0.5px;">"My Gravity"</h3>
+                        </div>
+                    </div>
+
+                    <!-- Peonies Collection Cover -->
+                    <div class="collection-card peonies-col" onclick="window.location.href='merchandise.html?collection=Peonies'" style="position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 3/4; cursor: pointer;">
+                        <div class="collection-card-bg" style="background-image: url('assets/photos/cover-peonies.jpg'); width:100%; height:100%; background-size:cover; transition: var(--transition);"></div>
+                        <div class="collection-card-overlay" style="justify-content: center; background: rgba(8, 12, 13, 0.65);">
+                            <h3 style="margin: 0; font-size: 2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; text-transform: none; letter-spacing: 0.5px;">"Peonies"</h3>
+                        </div>
+                    </div>
+
+                    <!-- Make You Happy Collection Cover -->
+                    <div class="collection-card make-you-happy-col" onclick="window.location.href='merchandise.html?collection=Make You Happy'" style="position: relative; overflow: hidden; border-radius: 6px; aspect-ratio: 3/4; cursor: pointer;">
+                        <div class="collection-card-bg" style="background-image: url('assets/photos/cover-make-you-happy.jpg'); width:100%; height:100%; background-size:cover; transition: var(--transition);"></div>
+                        <div class="collection-card-overlay" style="justify-content: center; background: rgba(8, 12, 13, 0.65);">
+                            <h3 style="margin: 0; font-size: 2rem; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; text-transform: none; letter-spacing: 0.5px;">"Make You Happy"</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Call-to-action Section -->
+        <section id="bookings-teaser" style="padding: 100px 0; background-color: var(--gray-50); text-align: center; border-bottom: 1px solid var(--gray-200);">
+            <div class="container">
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--primary); margin-bottom: 12px;">Bookings & Collaborations</h2>
+                <p style="color: var(--gray-600); max-width: 600px; margin: 0 auto 36px auto; font-size: 1.05rem;">Interested in booking Megan Carelse for musical performances, media appearances, brand partnerships, or screen roles? Let's connect.</p>
+                <a href="contact.html" class="hero-btn primary" style="padding: 16px 36px;">Get In Touch <i data-lucide="send" style="width: 16px; height: 16px; vertical-align: middle; margin-left: 8px;"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-logo">Megan Carelse</h2>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                <a href="mailto:contact@megancarelse.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+            <p class="contact-info">Representative Bookings: bookings@megancarelse.com</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Megan Carelse. All rights reserved. Professional Music & Performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Drawer (Persisted and shared globally via localStorage) -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <h2>Your Shopping Cart</h2>
+                <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Shopping Cart"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cart-drawer-items" id="cartDrawerItems">
+                <!-- Cart items will be dynamically injected here -->
+            </div>
+            <div class="cart-drawer-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Items Subtotal</span>
+                        <span id="cartSubtotal">R0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Eco-friendly Shipping</span>
+                        <span id="cartShipping">R0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total (ZAR)</span>
+                        <span id="cartTotal">R0.00</span>
+                    </div>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">
+                    <i data-lucide="lock"></i> Pay with Stripe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secure Checkout Simulation Modal -->
+    <div id="checkoutModal" class="checkout-modal">
+        <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+        <div class="checkout-modal-content">
+            <button id="checkoutModalCloseBtn" class="checkout-modal-close" aria-label="Close Checkout"><i data-lucide="x"></i></button>
+            <div class="checkout-form-container" id="checkoutFormContainer">
+                <div class="checkout-header">
+                    <i data-lucide="shield-check" class="shield-icon"></i>
+                    <h2>Stripe Secure Checkout</h2>
+                    <p>Provide payment details to secure your purchase.</p>
+                </div>
+                <form id="stripePaymentForm" class="stripe-payment-form">
+                    <div class="form-group">
+                        <label for="checkoutEmail">Email Address</label>
+                        <input type="email" id="checkoutEmail" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardHolder">Cardholder Name</label>
+                        <input type="text" id="cardHolder" required placeholder="Megan Carelse">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <div class="card-input-wrapper">
+                            <input type="text" id="cardNumber" required placeholder="4242 4242 4242 4242" maxlength="19">
+                            <i data-lucide="credit-card" class="card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardExpiry">Expiration (MM/YY)</label>
+                            <input type="text" id="cardExpiry" required placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCvc">CVC</label>
+                            <input type="text" id="cardCvc" required placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-total-summary">
+                         <span>Grand Total Due</span>
+                         <strong id="checkoutPayAmount">R0.00</strong>
+                    </div>
+                    
+                    <button type="submit" id="paySubmitBtn" class="pay-submit-btn">
+                         <span id="payBtnText">Complete Purchase</span>
+                         <div id="payBtnSpinner" class="spinner hidden"></div>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Payment Success Screen -->
+            <div id="paymentSuccessScreen" class="payment-success-screen hidden">
+                <div class="success-animation">
+                     <i data-lucide="check-circle-2" class="success-check-icon"></i>
+                </div>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for supporting Megan Carelse. Your payment was processed securely via Stripe. A copy of your invoice and product access has been dispatched to your email.</p>
+                <div class="order-receipt-box">
+                     <p>Order Reference: <strong id="receiptOrderId">#MC-84729</strong></p>
+                     <p>Total Charge: <strong id="receiptAmount">R0.00</strong></p>
+                </div>
+                <button id="successCloseBtn" class="success-close-btn">Return to Shop</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Preview / Trailer Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-overlay" id="videoModalOverlay"></div>
+        <div class="video-modal-content">
+            <button id="videoModalCloseBtn" class="video-modal-close" aria-label="Close Trailer"><i data-lucide="x"></i></button>
+            <div class="video-player-wrapper">
+                <div class="simulated-trailer-player">
+                    <div class="trailer-play-icon">
+                        <i data-lucide="clapperboard"></i>
+                    </div>
+                    <h2 id="videoModalTitle">Shadows of the Cape</h2>
+                    <p class="video-description" id="videoModalDesc">Official Trailer & Scene Reels. A thrilling dramatic thriller set against the coastal backdrop of the South African peninsula.</p>
+                    <div class="simulated-timeline">
+                        <div class="timeline-bar"></div>
+                        <span class="badge-trailer">Teaser Reel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discography | Megan Carelse Official Music</title>
+    <meta name="description" content="Stream and purchase official music releases by Megan Carelse. Listen to My Gravity, Peonies, Make You Happy, and other atmospheric singles.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.400.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Megan Carelse</a>
+            <div class="nav-links">
+                <a href="index.html"><span>Home</span></a>
+                <a href="about.html"><span>About</span></a>
+                <a href="discography.html" class="active"><span>Discography</span></a>
+                <a href="merchandise.html"><span>Shop</span></a>
+                <a href="contact.html"><span>Contact</span></a>
+                <button id="cartToggleBtn" class="cart-toggle-btn" aria-label="Open Shopping Cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>The Discography</h1>
+            <p class="subtitle">Stream her warm atmospheric singles and purchase digital downloads to support the artist directly.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="music-section" style="padding: 80px 0;">
+            <div class="container">
+                <div class="music-grid-layout">
+                    <!-- Left: Tracklist Directory Navigator (30% width) -->
+                    <div class="tracklist-column">
+                        <h2 class="tracklist-header">Browse Tracks</h2>
+                        <div class="tracklist-vertical" id="tracklistVertical">
+                            <!-- Track entries injected dynamically by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Right: Large Active Song Spotlight Panel (70% width) -->
+                    <div class="spotlight-panel">
+                        <div class="spotlight-card-layout">
+                            <!-- Column 1: Expanded Vinyl Player Deck -->
+                            <div class="spotlight-player-deck">
+                                <div class="disc-vinyl-spotlight-wrapper" id="discVinylWrapper">
+                                    <div class="disc-vinyl-sleeve">
+                                        <img id="playerImg" src="assets/photos/cover-home.jpg" alt="Now Playing">
+                                    </div>
+                                    <div class="disc-vinyl-record">
+                                        <div class="disc-vinyl-label">
+                                            <div class="disc-label-inner">
+                                                <span id="vinylLabelTitle">My Gravity</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="player-info" style="text-align: center; margin-top: 24px;">
+                                    <h3 id="playerTitle" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin-bottom: 4px; color: var(--primary); font-weight: 600;">My Gravity</h3>
+                                    <p id="playerArtist" style="color: var(--primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 20px; font-weight: 600;">Megan Carelse</p>
+                                </div>
+
+                                <div class="player-controls">
+                                    <audio id="mainAudio" src="assets/music/My Gravity - Megan Carelse.mp3"></audio>
+                                    <button class="control-btn" id="prevBtn" aria-label="Previous Track"><i data-lucide="skip-back"></i></button>
+                                    <button class="play-pause-btn" id="playPauseBtn" aria-label="Play or Pause Track">
+                                        <i data-lucide="play" id="playIcon"></i>
+                                        <i data-lucide="pause" id="pauseIcon" class="hidden"></i>
+                                    </button>
+                                    <button class="control-btn" id="nextBtn" aria-label="Next Track"><i data-lucide="skip-forward"></i></button>
+                                </div>
+
+                                <div class="progress-wrapper">
+                                    <span id="currentTime">0:00</span>
+                                    <div class="progress-container" id="progressContainer">
+                                        <div class="progress-bar" id="progressBar"></div>
+                                    </div>
+                                    <span id="durationTime">0:00</span>
+                                </div>
+
+                                <button class="buy-track-btn" id="buyTrackBtn" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                                    <i data-lucide="shopping-cart" style="width: 16px; height: 16px;"></i> Buy track for R15.00
+                                </button>
+                            </div>
+
+                            <!-- Column 2: Lyrics & Story Spotlight -->
+                            <div class="spotlight-lyrics-deck">
+                                <span class="merch-collection-tag" id="spotlightCategory" style="margin-bottom: 8px; display: inline-block;">Single Release</span>
+                                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--primary); margin: 6px 0 6px 0; font-weight: 600;">Behind the Song</h4>
+                                <p class="track-story" id="spotlightStory" style="font-size: 0.95rem; color: var(--gray-500); font-style: italic; line-height: 1.5; border-left: 2px solid var(--primary-light); padding-left: 12px; margin-bottom: 20px;">"This song explores the weight of silence. It’s about that one person or memory that remains the quiet anchor in your life—the constant pull of home no matter how far you drift."</p>
+                                
+                                <div class="divider left" style="margin: 20px 0; border-top: 1px solid var(--gray-150);"></div>
+                                
+                                <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 12px; font-weight: 600;">Lyrics & Poetry</h4>
+                                <div class="lyrics-scroll-box" style="max-height: 250px; overflow-y: auto; padding-right: 15px;">
+                                    <div class="lyrics-text" id="spotlightLyrics" style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.6; color: var(--foreground); white-space: pre-line;">
+                                        I feel the pull when the shadows grow tall
+                                        A quiet whisper echoing down the hall
+                                        You are the weight that I cannot escape
+                                        Tracing the lines that the evening will shape
+                                        
+                                        Oh, you are my gravity
+                                        Holding me close when I want to be free
+                                        In the cold winter air, in the highveld breeze
+                                        You are the anchor that brings me to my knees...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>ction>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-logo">Megan Carelse</h2>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                <a href="mailto:contact@megancarelse.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+            <p class="contact-info">Representative Bookings: bookings@megancarelse.com</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Megan Carelse. All rights reserved. Professional Music & Performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Drawer (Persisted and shared globally) -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <h2>Your Shopping Cart</h2>
+                <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Shopping Cart"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cart-drawer-items" id="cartDrawerItems">
+                <!-- Cart items will be dynamically injected here -->
+            </div>
+            <div class="cart-drawer-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Items Subtotal</span>
+                        <span id="cartSubtotal">R0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Eco-friendly Shipping</span>
+                        <span id="cartShipping">R0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total (ZAR)</span>
+                        <span id="cartTotal">R0.00</span>
+                    </div>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">
+                    <i data-lucide="lock"></i> Pay with Stripe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stripe Secure Checkout Simulation Modal -->
+    <div id="checkoutModal" class="checkout-modal">
+        <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+        <div class="checkout-modal-content">
+            <button id="checkoutModalCloseBtn" class="checkout-modal-close" aria-label="Close Checkout"><i data-lucide="x"></i></button>
+            <div class="checkout-form-container" id="checkoutFormContainer">
+                <div class="checkout-header">
+                    <i data-lucide="shield-check" class="shield-icon"></i>
+                    <h2>Stripe Secure Checkout</h2>
+                    <p>Provide payment details to secure your purchase.</p>
+                </div>
+                <form id="stripePaymentForm" class="stripe-payment-form">
+                    <div class="form-group">
+                        <label for="checkoutEmail">Email Address</label>
+                        <input type="email" id="checkoutEmail" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardHolder">Cardholder Name</label>
+                        <input type="text" id="cardHolder" required placeholder="Megan Carelse">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <div class="card-input-wrapper">
+                            <input type="text" id="cardNumber" required placeholder="4242 4242 4242 4242" maxlength="19">
+                            <i data-lucide="credit-card" class="card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardExpiry">Expiration (MM/YY)</label>
+                            <input type="text" id="cardExpiry" required placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCvc">CVC</label>
+                            <input type="text" id="cardCvc" required placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-total-summary">
+                         <span>Grand Total Due</span>
+                         <strong id="checkoutPayAmount">R0.00</strong>
+                    </div>
+                    
+                    <button type="submit" id="paySubmitBtn" class="pay-submit-btn">
+                         <span id="payBtnText">Complete Purchase</span>
+                         <div id="payBtnSpinner" class="spinner hidden"></div>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Payment Success Screen -->
+            <div id="paymentSuccessScreen" class="payment-success-screen hidden">
+                <div class="success-animation">
+                     <i data-lucide="check-circle-2" class="success-check-icon"></i>
+                </div>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for supporting Megan Carelse. Your payment was processed securely via Stripe. A copy of your invoice and product access has been dispatched to your email.</p>
+                <div class="order-receipt-box">
+                     <p>Order Reference: <strong id="receiptOrderId">#MC-84729</strong></p>
+                     <p>Total Charge: <strong id="receiptAmount">R0.00</strong></p>
+                </div>
+                <button id="successCloseBtn" class="success-close-btn">Return to Shop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>

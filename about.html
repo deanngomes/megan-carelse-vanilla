@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Megan Carelse | Artist & Actor Story</title>
+    <meta name="description" content="Discover the creative path, musical evolution, Johannesburg roots, and acting credibility of South African artist Megan Carelse.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.400.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Megan Carelse</a>
+            <div class="nav-links">
+                <a href="index.html"><span>Home</span></a>
+                <a href="about.html" class="active"><span>About</span></a>
+                <a href="discography.html"><span>Discography</span></a>
+                <a href="merchandise.html"><span>Shop</span></a>
+                <a href="contact.html"><span>Contact</span></a>
+                <button id="cartToggleBtn" class="cart-toggle-btn" aria-label="Open Shopping Cart">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cartBadge" class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>The Story</h1>
+            <p class="subtitle">A brief look into the creative spirit, musical craftsmanship, and storytelling background of Megan Carelse.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section" style="padding: 100px 0;">
+            <div class="container">
+                <div class="about-content" style="align-items: flex-start; gap: 64px;">
+                    <div class="about-image" style="position: sticky; top: 120px;">
+                        <img src="assets/photos/megan-carelse-3-vanilla.jpg" alt="Megan Carelse Artistic Portrait">
+                        <div class="about-signature" style="font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 2.2rem; color: var(--soil-brown); margin-top: 30px; text-align: center; letter-spacing: 1px;">
+                            Megan Carelse
+                        </div>
+                    </div>
+                    <div class="about-text" style="max-width: 650px;">
+                        <span class="merch-collection-tag">Biography</span>
+                        <h2 style="font-size: 2.8rem; margin: 8px 0 16px 0;">A Soul Bound to Storytelling</h2>
+                        <div class="divider left" style="margin-bottom: 30px;"></div>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px; color: var(--gray-900);">Megan Carelse is an independent artist, lyricist, and actor based out of the vibrant cultural landscape of Johannesburg, South Africa. Combining rich atmospheric songwriting with an magnetic vocal presence, she constructs musical worlds that feel deeply intimate yet vast and cinematic.</p>
+
+                        <h3 style="font-size: 1.8rem; margin: 40px 0 12px 0; color: var(--primary);">Johannesburg Foundations</h3>
+                        <p style="margin-bottom: 24px;">Growing up amidst the energetic rhythm and creative diversity of Johannesburg, Megan was influenced early on by the power of raw storytelling. The local artistic community taught her to see art not just as entertainment, but as an essential dialogue. Her music reflects this grit and honesty—layered vocal arrangements and organic instrumentation echoing the vast emotional currents of city life and quiet winter introspection.</p>
+
+                        <h3 style="font-size: 1.8rem; margin: 40px 0 12px 0; color: var(--primary);">The Acoustic & Ambient Journey</h3>
+                        <p style="margin-bottom: 24px;">Megan’s musical style represents a modern evolution of acoustic folk blended with ambient pop. Every release is treated as a narrative project. Her popular singles, such as <strong>"Peonies"</strong> and <strong>"My Gravity"</strong>, capture milestones of her growth. "Peonies" tells the story of patient growth and waiting for things to bloom on their own schedule during a long dry highveld season. Her melodies rely heavily on layered warm vocals, creating a comforting blanket of sound for the listener.</p>
+
+                        <h3 style="font-size: 1.8rem; margin: 40px 0 12px 0; color: var(--primary);">The Cinematic Perspective</h3>
+                        <p style="margin-bottom: 24px;">In addition to her primary focus on songwriting and music releases, Megan maintains professional credibility on screen. Her acting credentials in various South African theater, independent cinema, and dramatic productions add an incredible cinematic weight to her vocal delivery. Her understanding of pacing, subtext, and physical expression is evident in her live performances and music visualizers. For Megan, music and acting are simply two branches of the same tree: the pursuit of emotional truth.</p>
+                        
+                        <div style="margin-top: 48px; padding: 24px; background-color: var(--gray-50); border-left: 3px solid var(--primary); border-radius: 4px;">
+                            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-style: italic; line-height: 1.5; color: var(--primary); margin-bottom: 0;">"Storytelling is how we make sense of our gravity. It connects the songs we write to the scenes we inhabit, keeping us grounded in what truly matters."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Photo Portfolio Showcase / Stylized Cozy Grids -->
+        <section style="background-color: var(--gray-50); padding: 100px 0; border-top: 1px solid var(--gray-200);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Creative Chronicles</h2>
+                    <p class="subtitle">Capturing the atmosphere of studio writing, live sets, and cinematic productions.</p>
+                    <div class="divider"></div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+                    <!-- Card 1 -->
+                    <div style="background: var(--gray-50); border-radius: 6px; overflow: hidden; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);">
+                        <div style="aspect-ratio: 4/3; overflow: hidden;">
+                            <img src="assets/photos/cover-my-gravity.jpg" alt="Writing Session" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div style="padding: 24px;">
+                            <span class="merch-collection-tag">Studio Logs</span>
+                            <h4 style="font-size: 1.4rem; color: var(--primary); margin: 6px 0;">Ambient Track Overlays</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500);">Behind the console, mixing multi-layered vocal loops to design the warm, cozy atmosphere heard in 'My Gravity'.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div style="background: var(--gray-50); border-radius: 6px; overflow: hidden; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);">
+                        <div style="aspect-ratio: 4/3; overflow: hidden;">
+                            <img src="assets/photos/megan-carelse-2-vanilla.jpg" alt="Live Set" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div style="padding: 24px;">
+                            <span class="merch-collection-tag">Performances</span>
+                            <h4 style="font-size: 1.4rem; color: var(--primary); margin: 6px 0;">Johannesburg Acoustic Sets</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500);">An intimate evening sharing acoustic previews and lyrical backstories with a supportive local community.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div style="background: var(--gray-50); border-radius: 6px; overflow: hidden; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);">
+                        <div style="aspect-ratio: 4/3; overflow: hidden;">
+                            <img src="assets/photos/IMG-ART-cover-of-make-you-happy-by-megan-carelse.jpg" alt="On Location" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div style="padding: 24px;">
+                            <span class="merch-collection-tag">Behind the Lens</span>
+                            <h4 style="font-size: 1.4rem; color: var(--primary); margin: 6px 0;">Cinematic Production Credits</h4>
+                            <p style="font-size: 0.9rem; color: var(--gray-500);">Working with dramatic lighting on location, translating story beats into emotional presence on camera.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer-logo">Megan Carelse</h2>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                <a href="mailto:contact@megancarelse.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            </div>
+            <p class="contact-info">Representative Bookings: bookings@megancarelse.com</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Megan Carelse. All rights reserved. Professional Music & Performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Persistent Cart Drawer -->
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+        <div class="cart-drawer-content">
+            <div class="cart-drawer-header">
+                <h2>Your Shopping Cart</h2>
+                <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close Shopping Cart"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cart-drawer-items" id="cartDrawerItems">
+                <!-- Cart items will be dynamically injected here -->
+            </div>
+            <div class="cart-drawer-footer">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Items Subtotal</span>
+                        <span id="cartSubtotal">R0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Eco-friendly Shipping</span>
+                        <span id="cartShipping">R0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total (ZAR)</span>
+                        <span id="cartTotal">R0.00</span>
+                    </div>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">
+                    <i data-lucide="lock"></i> Pay with Stripe
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stripe Secure Checkout Simulation Modal -->
+    <div id="checkoutModal" class="checkout-modal">
+        <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+        <div class="checkout-modal-content">
+            <button id="checkoutModalCloseBtn" class="checkout-modal-close" aria-label="Close Checkout"><i data-lucide="x"></i></button>
+            <div class="checkout-form-container" id="checkoutFormContainer">
+                <div class="checkout-header">
+                    <i data-lucide="shield-check" class="shield-icon"></i>
+                    <h2>Stripe Secure Checkout</h2>
+                    <p>Provide payment details to secure your purchase.</p>
+                </div>
+                <form id="stripePaymentForm" class="stripe-payment-form">
+                    <div class="form-group">
+                        <label for="checkoutEmail">Email Address</label>
+                        <input type="email" id="checkoutEmail" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardHolder">Cardholder Name</label>
+                        <input type="text" id="cardHolder" required placeholder="Megan Carelse">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <div class="card-input-wrapper">
+                            <input type="text" id="cardNumber" required placeholder="4242 4242 4242 4242" maxlength="19">
+                            <i data-lucide="credit-card" class="card-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cardExpiry">Expiration (MM/YY)</label>
+                            <input type="text" id="cardExpiry" required placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCvc">CVC</label>
+                            <input type="text" id="cardCvc" required placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-total-summary">
+                         <span>Grand Total Due</span>
+                         <strong id="checkoutPayAmount">R0.00</strong>
+                    </div>
+                    
+                    <button type="submit" id="paySubmitBtn" class="pay-submit-btn">
+                         <span id="payBtnText">Complete Purchase</span>
+                         <div id="payBtnSpinner" class="spinner hidden"></div>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Payment Success Screen -->
+            <div id="paymentSuccessScreen" class="payment-success-screen hidden">
+                <div class="success-animation">
+                     <i data-lucide="check-circle-2" class="success-check-icon"></i>
+                </div>
+                <h2>Order Confirmed!</h2>
+                <p>Thank you for supporting Megan Carelse. Your payment was processed securely via Stripe. A copy of your invoice and product access has been dispatched to your email.</p>
+                <div class="order-receipt-box">
+                     <p>Order Reference: <strong id="receiptOrderId">#MC-84729</strong></p>
+                     <p>Total Charge: <strong id="receiptAmount">R0.00</strong></p>
+                </div>
+                <button id="successCloseBtn" class="success-close-btn">Return to Shop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
